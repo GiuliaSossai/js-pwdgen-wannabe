@@ -8,16 +8,21 @@ const firstName = prompt('Come ti chiami?');
 const surname = prompt('Qual è il tuo cognome?');
 const favColor = prompt('Qual  è il tuo colore preferito?');
 
+const password = firstName+surname+favColor+21;
+
 
 console.log(firstName);
 console.log(surname);
 console.log(favColor);
 
-document.getElementById("psw").innerHTML = 
-`
-Password: ${firstName}${surname}${favColor}
-`;
+//metodo letterale ma più lungo:
+// document.getElementById("psw").innerHTML = 
+// `
+// Password: ${firstName}${surname}${favColor}21
+// `;
 
-let somma = firstName + surname + favColor;
+document.getElementById("psw").innerHTML = password;
 
+
+let somma = password;
 document.getElementById("lunghezza").innerHTML = somma.length;
